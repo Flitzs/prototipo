@@ -53,7 +53,24 @@
     usgs.addTo(map);
 
     // Marcador de localização
-    L.marker([-12.977, -38.5016]).addTo(map)
-    .bindPopup('Obla Di')
+    L.marker([-12.977, -38.5016]).addTo(map);
+    
 
+    // Adiciona marcos GeoJason
+    // const f_location = 'prototipo\fire_nrt_M-C61_300360.json';
+
+    // async function getData() {
+    //     const response = await fetch(f_location);
+    //     const data = await response.json();
+    //     const { latitude, longitude } = data;
+
+    //     L.marker([latitude, longitude]).addTo(map);
+    //     L.geoJSON(data).addTo(map);
+    //     // const request = await fetch
+    // }
+    //getData()
+
+    import {linhaJSON} from './linha.js';
+    L.geoJSON(linhaJSON).addTo(map);
+    console.log(linhaJSON); 
 </script>
